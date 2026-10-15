@@ -1,0 +1,41 @@
+{
+  "name": "zayan_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "pm2:start": "pm2 start ecosystem.config.cjs",
+    "pm2:stop": "pm2 stop zayan-backend",
+    "pm2:restart": "pm2 restart zayan-backend",
+    "pm2:logs": "pm2 logs zayan-backend",
+    "pm2:delete": "pm2 delete zayan-backend",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-admin": "node scripts/createAdmin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.939.0",
+    "@huggingface/inference": "^4.13.10",
+    "@sendgrid/mail": "^8.1.6",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.0.0",
+    "multer": "^2.0.2",
+    "openai": "^6.16.0",
+    "react-quill": "^2.0.0",
+    "socket.io": "^4.8.1",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
